@@ -56,6 +56,8 @@ field::$methods['relative'] = function($field, $args = null) {
       $args = array('lang' => $args);
     } elseif (is_int($args)) {
       $args = array('length' => $args);
+    } else {
+      $args = array();
     }
 
     $field->value = relativeDate($field->value, $args);
